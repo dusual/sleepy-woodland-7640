@@ -12,16 +12,6 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {'default': dj_database_url.config(default='postgres://wklxugwkojyhdh:wxpQy6M6iUM8tcEz7u8s2IMF0U@ec2-107-22-169-176.compute-1.amazonaws.com:5432/d8k5kcc89i4896')}
-DATABASES =  {
-'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'foo',                      # Or path to database file if using sqlite3.
-        'USER': 'foo',                      # Not used with sqlite3.
-        'PASSWORD': 'bar',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
 
 
 # Local time zone for this installation. Choices can be found here:
