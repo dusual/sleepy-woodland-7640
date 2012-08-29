@@ -1,1 +1,1 @@
-web: python gitag/gitag/manage.py run_gunicorn -b "0.0.0.0:$PORT" -w 3
+web: python gitag/gitag/manage.py runserver  0.0.0.0:$PORT 
