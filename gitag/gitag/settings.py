@@ -1,5 +1,5 @@
 # Django settings for gitag project.
-
+import dj_database_url
 
 
 DEBUG = True
@@ -11,7 +11,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-
+DATABASES = {'default': dj_database_url.config(default='postgres://wklxugwkojyhdh:wxpQy6M6iUM8tcEz7u8s2IMF0U@ec2-107-22-169-176.compute-1.amazonaws.com:5432/d8k5kcc89i4896')}
 DATABASES =  {
 'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
