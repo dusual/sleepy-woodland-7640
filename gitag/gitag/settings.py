@@ -1,5 +1,15 @@
 # Django settings for gitag project.
 import dj_database_url
+import os
+import sys
+
+
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+LIBS_ROOT =  os.path.join(SITE_ROOT, r'libs/')
+
+sys.path.append(LIBS_ROOT)
+
+
 
 
 DEBUG = True
