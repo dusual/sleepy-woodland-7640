@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'gitag.views.home', name='home'),
+    #url(r'^$', 'gitag.views.home', name='home'),
+    url("^$", 'gitag.gitapp.views.index', name="home"),
     url(r'^gitag/', include('gitag.gitapp.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
