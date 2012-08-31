@@ -1,0 +1,16 @@
+{% extends "gitapp/base_github.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+  <h3>Projects</h3>
+
+  <ul>
+    {% for project in project_list %}
+      <li><a href="{{ project.github_url }}">{{ project.title }}</a>
+	<a href="{% url github_project_detail project.slug %}">details</a>
+       </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

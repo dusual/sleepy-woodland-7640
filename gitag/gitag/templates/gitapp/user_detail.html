@@ -1,0 +1,22 @@
+{% extends "gitapp/base_github.html" %}
+
+{% block title %}{{ object.login }}{% endblock %}
+
+{% block content %}
+  <h3>{{ user.login }}</h3>
+
+  <div class="details">
+  Name : {{ user.name }}<br/>
+  Email : {{ user.email }}<br/>
+  Public Repos : {{ user.public_repo_count }}<br/>
+  </div>
+
+
+
+
+{% endblock %}
+
+
+
+
+

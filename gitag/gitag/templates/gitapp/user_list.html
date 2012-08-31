@@ -1,0 +1,26 @@
+{% extends "gitapp/base_github.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+     <div class="textographic">
+<form accept-charset="UTF-8" action="{% url github_project_list %}" id="top_search_form" method="get">          <p>
+
+            <input type="text" name="username" placeholder="Enter github handle" />
+
+          </p>
+</form>      </div>
+
+
+  <h3>Users</h3>
+
+  <ul>
+    {% for user in user_list %}
+      <li>{{ user.login }}
+         <a href="{% url github_user_detail user.login %}">info</a>
+         <a href="{% url github_project_list %}?username={{ user.login }}">projects</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

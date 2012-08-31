@@ -1,0 +1,14 @@
+{% extends "gitapp/base_github.html" %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+  <h3>{{ project.title }}</h3>
+
+
+   Description :{{ project.description}} <br/>
+   Url : <a href="{{ project.github_url }}">{{ project.github_repo }}</a></li>
+
+
+{% endblock %}
+
