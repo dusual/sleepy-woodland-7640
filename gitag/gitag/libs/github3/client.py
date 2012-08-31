@@ -175,6 +175,17 @@ class User(object):
     return PaginatedResourceList.FromResponse(self.client, resp)
 
 
+  def user_repos(self,login=None, **kw):
+    """Returns a ResourceList of a user's repos"""
+    if login is None:
+      url = self.BASE_USER_URL
+    else:
+      url = '%s/%s/repos' % (self.BASE_USERS_URL, login)
+    resp = self.client.get(url, **kw)
+    return ResourceList.FromResponse(self.client, resp)
+
+  
+
 class Organization(object):
   BASE_URL = "https://api.github.com/orgs"
 
