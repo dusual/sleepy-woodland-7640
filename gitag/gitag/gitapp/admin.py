@@ -1,5 +1,6 @@
 from django.contrib import admin
-from gitapp.models import GithubUser,Project 
+from gitapp.models import GithubUser
+from gitapp.models import Project 
 
 
 

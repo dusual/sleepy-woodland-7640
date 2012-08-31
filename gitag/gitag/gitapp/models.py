@@ -2,12 +2,12 @@ from django.db import models
 from github3.client import User as GUser
 from github3.client import Client
 from django.template.defaultfilters import slugify
-
+from django.core.urlresolvers import reverse
 
 class GithubUser(models.Model):
     login = models.CharField(max_length=100)
     name = models.CharField(max_length=100, blank=True)
-    email = models.EmailField(blank=True)
+    email = models.EmailField(blank=True,null=True)
     public_repo_count = models.PositiveSmallIntegerField(default=0)
 
     
